@@ -5,7 +5,7 @@ services:
     ports:
       - "81:80"
     deploy:
-    replicas: 3
+      replicas: 3
   train:
     image: ra17ghu/paytmtrain:latest
     ports:

@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  movies:
+    image: ra17ghu/paytm_movies:latest
+    ports:
+      - "81:80"
+    deploy:
+    replicas: 3
+  train:
+    image: ra17ghu/paytmtrain:latest
+    ports:
+      - "82:80"
+    deploy:
+      replicas: 3
+    dth:
+      image: ra17ghu/paytmdth:latest
+      ports:
+        - "83:80"
+      deploy:
+        replicas: 3
+    recharge:
+      image: ra17ghu/paytmrecharge:latest
+      ports:
+        - "84:80"
+      deploy:
+        replicas: 3
